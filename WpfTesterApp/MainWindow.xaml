@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTesterApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="800" Background="LawnGreen" MouseMove="Window_MouseMove">
+    <Grid Height="419" VerticalAlignment="Bottom">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="198*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="92*"/>
+        </Grid.RowDefinitions>
+        <Button Name="clickMe" Content="Button" HorizontalAlignment="Left" Margin="543,81,0,0" VerticalAlignment="Top" Width="198" Height="83" RenderTransformOrigin="0.5,0.5" FontSize="14" FontWeight="Bold" BorderBrush="#FF35AE35" Click="Button_Click" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4E4576" Offset="0.026"/>
+                    <GradientStop Color="#FFD6F3EB" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFE22371" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.242"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Calendar Name="myCalender" HorizontalAlignment="Left" Margin="133,91,0,0" VerticalAlignment="Top" Width="355" Height="278" MouseEnter="Calendar_MouseEnter" Grid.Row="1" Grid.RowSpan="3"/>
+
     </Grid>
 </Window>
